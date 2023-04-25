@@ -1,0 +1,89 @@
+
+<html>
+    <div class="list row">
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <input
+                type="text"
+                class="form-control"
+                placeholder="Search by id" [(ngModel)]="bookName"/>
+                <div class="input-group-append">
+                    <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    (click)="searchByName()">
+                    search </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<h2> Book List</h2>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      ViewByDepartment
+    </button>
+    <!--Using dropdown button to view each  department details-->
+    <ul class="dropdown-menu">
+      <li><button (click)="ViewEEE()" class="dropdown-item" type="button">View EEE Department</button></li>
+      <li><button (click)="ViewIT()" class="dropdown-item" type="button">view IT Department</button></li>
+      <li><button (click)="ViewCSE()" class="dropdown-item" type="button">view cse Department</button></li>
+      <li><button (click)="ViewMech()" class="dropdown-item" type="button">view Mechanical Department</button></li>
+    </ul>
+  </div>
+<style>
+    th{
+        text-decoration: #0c0007;
+    }
+    td{
+       text-decoration-color:aliceblue;
+    }
+</style>
+
+
+    <body>
+<table class = "table table-dark">
+    <thead>
+        <tr>
+            
+            <th> BookName </th>
+            <th > AuthorName </th>
+            <th> DepartmentId </th>
+            <th> DepartmentName </th>
+            <th> Edition </th>
+            <th> NoOfCopies </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of books" >
+            
+            <td> {{ book.bookName }} </td>
+            <td> {{ book.authorName }} </td>
+            <td> {{ book.deptId }} </td>
+            <td> {{ book.deptName }} </td>
+            <td> {{ book.edition }} </td>
+            <td> {{ book.noOfCopies }} </td>
+
+            
+
+           <td>
+                <button (click) = "updateBook(book.bookId)" class = "btn btn-secondary"> Update</button>
+                
+                <button (click) = "bookDetails(book.bookId)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+                <button (click)="confirmDelete(book)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <tr *ngIf="books.length !==0">
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllBooks()">Remove All</button>
+    </tr>
+    <tr scope="row" *ngIf="books.length === 0">
+        <td colspan="7" class="text-center">No Books Found</td>
+    </tr>
+</table>
+    </body>
+</html>

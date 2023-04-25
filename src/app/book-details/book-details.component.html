@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+    
+    <table style="width:75%" align="center" class = "table table-dark">
+        <tr>
+            
+          <th colspan="2">View Book Details</th>
+        
+        </tr>
+        
+          
+        <tr>
+          <th>Book Name</th>
+          <td>{{ book.bookName }}</td>
+          </tr>
+          <tr>
+            <th>AuthorName</th>
+            <td> {{ book.authorName }} </td>
+          </tr>
+          <tr>
+            <th> DepartmentId </th>
+            <td>{{ book.deptId }}</td>
+            </tr>
+            <tr>
+              <th> DepartmentName </th>
+              <td>{{ book.deptName }}</td>
+              </tr>
+          
+        
+            <tr>
+            <th>Edition</th>
+            <td> {{ book.edition }} </td>
+          </tr>
+          <tr>
+            <th>NoOfCopies</th>
+            <td> {{ book.noOfCopies }} </td>
+          </tr>
+        </table>
+        <a href="http://localhost:4200/books">
+        <button  type="button" class="btn btn-primary"> Back </button></a>
+    </body>
+    </html>
+          
+          
+          
+          
+          
+        
+          
+         
+          
+          
+        
+      
+      
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+
+
+
+<body>
+<div>
+    <h3> View Book Details</h3>
+    <div text-allign="center">
+        <label> <b> BookName: </b></label>  {{book.bookName}}
+    </div>
+    <div>
+        <label> <b> AuthorName: </b></label> {{book.authorName}}
+    </div>
+    <div>
+        <label> <b> Journal: </b></label> {{book.journal}}
+    </div>
+    <div>
+        <label> <b> Edition: </b></label> {{book.edition}}
+    </div>
+    <div>
+        <label> <b> NoOfCopies: </b></label> {{book.noOfCopies}}
+    </div>
+</div>
+</body>
+</html-->

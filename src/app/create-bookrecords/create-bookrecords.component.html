@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+<div class="col-md-6 offset-md-3">
+    <h3 style="text-align: center;"> Create Your Books Details </h3>
+    <form (ngSubmit) = "onSubmit()">
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="form-group">
+            <label style="color:aquamarine"> <b>BookName</b></label>
+            <input type="text" class ="form-control" id = "bookName" placeholder="your book name..."
+                [(ngModel)] = "book.bookName" name = "bookName" title="Give your full name..">
+                
+        </div>
+
+        <div class="form-group">
+            <label style="color:aquamarine"> AuthorName </label>
+            <input type="text" class ="form-control" id = "authorName" placeholder="your author name..."
+                [(ngModel)] = "book.authorName" name = "authorName" title="pls fill this one">
+        </div>
+        <div class="form-group">
+            <label style="color:aquamarine"> DepartmentId </label>
+            <input type="text" class ="form-control" id = "deptId" placeholder="your department Id..."
+                [(ngModel)] = "book.deptId" name = "deptId" title="Give your Department name..">
+                
+        </div>
+        <div class="form-group">
+            <label style="color:aquamarine"> DepartmentName </label>
+            <input type="text" class ="form-control" id = "deptName" placeholder="your department name..."
+                [(ngModel)] = "book.deptName" name = "deptName" title="Give your full name..">
+                
+        </div>
+        
+
+        
+        <div class="form-group">
+            <label style="color:aquamarine"> Edition </label>
+            <input type="text" class ="form-control" id = "edition" placeholder="which edition.."
+                [(ngModel)] = "book.edition" name = "edition" title="give your proper edition number">
+        </div>
+
+        <div class="form-group">
+            <label style="color:aquamarine"> NoOfCopies </label>
+            <input type="text" class ="form-control" id = "noOfCopies" placeholder="how many books copies.."
+                [(ngModel)] = "book.noOfCopies" name = "noOfCopies" title="your book copies">
+        </div>
+
+        <button (click)="confirmInserted()" class = "btn btn-success" type ="submit">Submit</button>
+
+        <a href="http:localhost:4200/books">
+        <button class = "btn btn-primary" type ="submit">Back</button></a>
+
+    </form>
+    </div> 
+   </body>
+    </html>

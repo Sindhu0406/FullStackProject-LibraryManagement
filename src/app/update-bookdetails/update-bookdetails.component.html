@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<div class="col-md-6 offset-md-3">
+    <h3 style="text-align: center;"> Update Your Book </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> BookName </label>
+            <input type="text" class ="form-control" id = "bookName"
+                [(ngModel)] = "book.bookName" name = "bookName" placeholder="update your book" title="fill your book name!">
+        </div>
+
+        <div class="form-group">
+            <label> AuthorName </label>
+            <input type="text" class ="form-control" id = "authorName"
+                [(ngModel)] = "book.authorName" name = "authorName" placeholder="update your author name.." title="fill your author name!">
+        </div>
+        <div class="form-group">
+            <label> DepartmentId </label>
+            <input type="text" class ="form-control" id = "deptId"
+                [(ngModel)] = "book.deptId" name = "deptId" placeholder="update your DepartmentId...." title="fill your department id!">
+        </div>
+        <div class="form-group">
+            <label> DepartmentName </label>
+            <input type="text" class ="form-control" id = "deptName"
+                [(ngModel)] = "book.deptName" name = "deptName" placeholder="update your department name.." title="fill your department name!">
+        </div>
+
+        
+
+        <div class="form-group">
+            <label> Edition </label>
+            <input type="text" class ="form-control" id = "edition"
+                [(ngModel)] = "book.edition" name = "edition" placeholder="update your edition" title="fill your edition name!">
+        </div>
+
+        <div class="form-group">
+            <label> NoOfCopies </label>
+            <input type="text" class ="form-control" id = "noOfCopies"
+                [(ngModel)] = "book.noOfCopies" name = "noOfCopies">
+        </div>
+
+        <button (click)="confirmUpdated()" class = "btn btn-success" type ="submit">Submit</button>
+        <a href="http://localhost:4200/books">
+        <button class = "btn btn-primary" type ="submit">Back</button></a>
+
+    </form>
+    </div> 
+    </body>
+    </html>
